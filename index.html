@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>limited editions</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='ltd_editions.css'>
+    <script src="https://kit.fontawesome.com/d881a9c703.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class='navbar'>
+        <a href='#'><img class="logo" src='./images/logo.png'></a>
+        <div class='nav-btns'>
+            <ul >
+                <a href='#gallery-div'><li>Gallery</li></a>
+                <a href='#'><li>Terms and conditions</li></a>
+                <a href='#'><li class="order-btn">ORDER NOW</li></a>
+            </ul>
+        </div>
+        <div class='mobile-nav'>
+            <div class='line1'></div>
+            <div class='line1'></div>
+            <div class='line1'></div>
+        </div>
+
+    </nav>
+    <div class='top-div'>
+        <div class='top-div-text'>
+            <span class='text-large'>RWANDA NZIZA</span><br>
+            <span class='text-small'>Branding Rwanda to the world, together.</span>
+        </div>
+    </div>
+    <div class='description-div'>
+        <div class='div-title'>Limited Editions</div>
+        <div class='description-body'>
+            Welcome to the RwandaNziza page of picture Limited editions! 
+            Fill your rooms with life and create an open and pleasant atmosphere with over 300 picture
+            frames for artwork, photos, posters or three-dimensional objects. Here you can find everything
+            for decorating your work space and for the satisfactory presentation of the things you want to
+            exhibit. Discover our high-quality and acid-free passepartouts as well. Or find the appropriate
+            system for professional picture hanging. For the DIY enthusiasts among you we also offer a special
+            selection of tools for making distinctive frames and protective mounting boards.<br><br> 
+
+            <span> Select your picture format or browse around in our world of frames.</span><br>
+        </div>
+        <a class='explore-btn' href='#gallery-div'>Explore Now</a>
+    </div>
+    <div id='gallery-div'>
+        <div class='div-title gallery-title'>Our Limited Version</div>
+        <div class='div-sub title-sub'>Please select Image that you like.</div>
+            <div class='gallery-grid'></div>
+    </div>
+    <div id='ordering-div'>
+        <div class='ordering-details'>
+            <div id='img-title'>'Sunset in Kinunu'</div>
+            <div id='img-location'>Location: <span id='loc-value'>Rusizi</span></div>
+            <div class='size-select'>
+                Select your option
+                <div class='flex-boxes'>
+                    <div>
+                        <div class='size-label'>Small size:</div>
+                        <div  class='size-box' id='small-size' tabindex='1' onclick='sizeClick("small")'>
+                            <span>50 X 30 cm</span>
+                            <span>450,000 RWF</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='size-label'>Medium size:</div>
+                        <div class='size-box' id='medium-size' tabindex='1' onclick='sizeClick("medium")'>
+                            <span>80 X 60 cm</span>
+                            <span>600,000 RWF</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class='size-label'>Large size:</div>
+                        <div  class='size-box' id='large-size' tabindex='1' onclick='sizeClick("large")'>
+                            <span>150 X 70 cm</span>
+                            <span>800,000 RWF</span>
+                        </div>
+                    </div>
+                </div>
+                <div class='checkout-val'>Total: <span id='checkout-val'>800,000 RWF</span></div>
+            </div>    
+            <label class='terms-conds-label'>
+                <input type='checkbox' id='terms-conds-checkbox' onclick='checkboxClick()'> 
+                  I accept the <a class='order-terms-conds' href=''>Terms and Conditions</a>
+            </label>
+            <input type='button' id='checkout-btn' value='Proceed to Checkout' onclick='submit_to_checkout()'>  
+                
+        </div>
+        <div class='large-frame-img'>
+            <div id='selected-l-size'></div>
+        </div>
+        <div class='medium-frame-img'>
+            <div id='selected-m-size'></div>
+        </div>
+        <div class='small-frame-img'>
+            <div id='selected-s-size'></div>
+        </div> 
+    </div>
+    <div class='contact'>
+        <div class='div-title '>Contact Us</div>
+        <div class='div-sub'>Any question or remarks? Just write us a message!</div>
+        <form id='contact-form'>
+            <label>
+                <span class='input-group'>Name</span><br>
+                <input type='text' id='name-field'>
+            </label>
+            <label>
+                <span class='input-group'>Email</span><br>
+                <input type='email' id='email-field'>
+            </label>
+            <label>
+                <span class='input-group'>Phone</span><br>
+                <input type='tel' id='phone-field'>
+            </label>
+            <label>
+                <span class='input-group'>Message</span><br>
+                <textarea  id='message-field'></textarea>
+            </label>
+            <input type='submit' id='contact-sbmt-btn' value='Send Email'>
+        </form>
+    </div>
+    <footer>
+        <div class='footer-div'>
+            <div class='flex box1'>
+                <div class='footer-div footer-flex-title'>ABOUT US</div>
+                <div class='footer-div'>We are Rwanda's Leading Imagery Stock.
+                     We give you access to thousands of Rwanda's 
+                     exclusive collections of Royalty-Free images, 
+                     Videos and Illustrations.
+                </div>
+                <div class='footer-div terms-conds-link'><a href='#'><i class='fa fa-info'></i>Terms and Conditions</a></div>
+            </div>
+            <div class='flex box2'>
+                <div class='footer-div footer-flex-title'>VISIT US</div>
+                <div class='loc-map'>
+                    <iframe style ='display: inline-block;'
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d255197.64569118095!2d30.097832!3d-1.968737!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4550ccd8a6504a76!2sIMAGE%20RWANDA!5e0!3m2!1sen!2srw!4v1615977495614!5m2!1sen!2srw"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            <div class='flex box3'>
+                <div class='footer-div footer-flex-title'>CONTACT</div>
+                <div class='footer-div contact'><i class='fa fa-home'></i><span>Rwanda, KN 3 Rd, Kigali</span></div>
+                <div class='footer-div contact'><i class='fa fa-envelope'></i><span>info@image.rw</span></div>
+                <div class='footer-div contact'><i class='fa fa-phone'></i><span> +250 788 322 588</span></div>
+                <div class='footer-div contact'><i class='fa fa-phone'></i><span>+250 788 322 579</span></div>
+            </div>
+        </div>
+        <div class='copyright-div'>&copy <script>document.write(new Date().getFullYear())</script> Copyright:<span class='span-img-rda'> Image Rwanda Ltd.</span></div>
+    </footer>
+    <script src='ltd_editions.js'></script>
+</body>
+</html>

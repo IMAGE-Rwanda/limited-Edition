@@ -1,1 +1,1 @@
-#### limited editions
+#### Limited editions
