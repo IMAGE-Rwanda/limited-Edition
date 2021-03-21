@@ -9,77 +9,7 @@ const navSlide = () => {
 
 navSlide();
 
-window.onload = document.getElementById('ordering-div').style.display = 'none';
-
-const imagesArray = [
-    {
-        title: 'kinunu',
-        location: 'kaynza',
-        link: './images/Burera.JPG'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/burerabirds_1.JPG'
-    },
-    {
-        title: 'kinunu',
-        location: 'kaynza',
-        link: './images/bw portait.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/Exhibition3.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/F14A4211.jpeg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/mistylandscape.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/KCC.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/reflection.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/Landscape.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/UbumuntuArts2.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/Rusiga.jpg'
-    },
-    {
-        title: 'kaynza',
-        location: 'maya',
-        link: './images/portrait.jpg'
-    }
-
-]
-
-for (let i = 0; i < imagesArray.length; i++) {
-    document.querySelector('.gallery-grid').innerHTML += 
-    `<div  onClick='assignImgInfo("${imagesArray[i].title}", "${imagesArray[i].location}", "${imagesArray[i].link}")'>
-    <img tabindex='1' src='${imagesArray[i].link}'></div>`
-}
+window.onload = document.querySelector('.ordering-div-content').style.display = 'none';
 
 let largeFrameImg = document.getElementById('selected-l-size').style,
     mediumFrame = document.getElementById('selected-m-size').style,
@@ -95,10 +25,95 @@ let largeFrameImg = document.getElementById('selected-l-size').style,
     term_conds_checkbox = document.getElementById('terms-conds-checkbox'),
     checkout_btn = document.getElementById('checkout-btn'),
     total_money = document.getElementById('checkout-val'),
-    selectedSize;
+    selectedSize, div_on_display = '.top-div';
+
+const imagesArray = [
+    {
+        title: 'Burera',
+        location: 'Burera',
+        link: './compressed/Burera.jpg'
+    },
+    {
+        title: 'Ubumuntu Arts',
+        location: 'Kigali',
+        link: './compressed/UbumuntuArts2.jpg'
+    },
+    {
+        title: 'Birds in Burera',
+        location: 'Burera',
+        link: './compressed/burerabirds_1.JPG'
+    },
+    {
+        title: 'Exhibition',
+        location: 'maya',
+        link: './compressed/Exhibition3.jpg'
+    },
+    {
+        title: 'Misty landscape',
+        location: 'maya',
+        link: './compressed/mistylandscape.jpg'
+    },
+    {
+        title: 'Sunset',
+        location: 'maya',
+        link: './compressed/portrait.jpg'
+    },
+    {
+        title: 'Anti corruption statue',
+        location: 'maya',
+        link: './compressed/KCC.jpg'
+    },
+    {
+        title: 'Reflection',
+        location: 'maya',
+        link: './compressed/reflection.jpg'
+    },
+    {
+        title: 'Rusiga panorama',
+        location: 'Rusiga',
+        link: './compressed/Rusiga.jpg'
+    }
   
+];
+
+let grid_div = document.querySelector('.gallery-flex');
+const addImgs = () => {
+    for (let i = 0; i < imagesArray.length; i++) {
+        grid_div.innerHTML += 
+        `<div class='flex-item' onclick='assignImgInfo("${imagesArray[i].title}", "${imagesArray[i].location}", "${imagesArray[i].link}")'>
+        <img tabindex='1' src='${imagesArray[i].link}'><div class='img_hover'><i class='fa fa-expand'></i></div></div>`;
+    }
+    grid_div.innerHTML += 
+    `<li class='flex-item'></li>`;
+}
+addImgs();
+
+
+
+
+
+function divSwap(prev_div_class, next_div_class) {
+
+    document.querySelector(prev_div_class).classList.toggle('apear-effect', false);
+    document.querySelector(prev_div_class).classList.toggle('disappear-div');
+    document.querySelector(next_div_class).classList.toggle('apear-effect');
+    div_on_display = next_div_class;    
+}
+function to_contactForm (prev_div_class, next_div_class) {
+    document.querySelector(prev_div_class).classList.toggle('apear-effect', false);
+    document.querySelector(prev_div_class).classList.toggle('disappear-div');
+    document.getElementById('ordering-div').style.display = "none";
+    document.querySelector(next_div_class).classList.toggle('apear-effect');
+    div_on_display = next_div_class;  
+}
+
+function nav_div_swap (next_div_class) {
+   divSwap(div_on_display, next_div_class)
+}
+
 const assignImgInfo = (title, location, imgLink) => {
     document.getElementById('ordering-div').style.display = 'block';
+    document.querySelector('.ordering-div-content').style.display = 'block';
     
     term_conds_checkbox.checked = false;
     checkout_btn.disabled = true;
@@ -118,29 +133,17 @@ const assignImgInfo = (title, location, imgLink) => {
 
 }
 
-// function imgIdentifier() {
+document.querySelector('.close').onclick = function () {
+    document.getElementById('ordering-div').style.display = "none";
+  }
+  
 
+  window.onclick = function(event) {
+    if (event.target == document.getElementById('ordering-div')) {
+        document.getElementById('ordering-div').style.display = "none";
+    }
+  }
 
-//     let img = document.getElementById('myImg');
-//     img.onload = function () {
-    
-//     if (img.naturalWidth > img.naturalHeight) {
-//     orientation = 'landscape';
-//     } else if (img.naturalWidth < img.naturalHeight) {
-//     orientation = 'portrait';
-//     } else {
-//     orientation = 'even';
-//     }
-      
-//     document.body.innerHTML += '<h1>' + orientation + '</h1>';
-    
-//     }
-    
-//     img.src = "https://www.image.rw/wp-content/uploads/2019/11/my-gound-and-air-moments-through-rwandas-landscapes_40041972161_o-scaled.jpg";
-    
-// };
-
-// imgIdentifier();
 
 
 const sizeClick = (size) => {
@@ -165,7 +168,9 @@ const sizeClick = (size) => {
         total_money.innerHTML = '450,000 RWF'
 
     }
-}  
+}
+
+ 
 const checkboxClick = () => {
     if (!term_conds_checkbox.checked) {
         checkout_btn.disabled = true;
@@ -178,6 +183,7 @@ const checkboxClick = () => {
     } 
 }
 
+document.getElementById
 
 const submit_to_checkout = () => {
          let img_Info = 

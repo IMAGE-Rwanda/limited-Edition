@@ -10,12 +10,12 @@
 </head>
 <body>
     <nav class='navbar'>
-        <a href='#'><img class="logo" src='./images/logo.png'></a>
+        <a href=''><img class="logo" src='https://www.image.rw/wp-content/themes/gaia/images/logo.png'></a>
         <div class='nav-btns'>
             <ul >
-                <a href='#gallery-div'><li>Gallery</li></a>
+                <a href='#' class='nav-gallery' onclick='nav_div_swap(".gallery-div")'><li>Gallery</li></a>
                 <a href='#'><li>Terms and conditions</li></a>
-                <a href='#'><li class="order-btn">ORDER NOW</li></a>
+                <a href='#' onclick='nav_div_swap(".footer")'><li>About Us</li></a>
             </ul>
         </div>
         <div class='mobile-nav'>
@@ -25,68 +25,73 @@
         </div>
 
     </nav>
-    <div class='top-div'>
-        <div class='top-div-text'>
-            <span class='text-large'>RWANDA NZIZA</span><br>
-            <span class='text-small'>Branding Rwanda to the world, together.</span>
-        </div>
-    </div>
-    <div class='description-div'>
-        <div class='div-title'>Limited Editions</div>
-        <div class='description-body'>
-            Welcome to the RwandaNziza page of picture Limited editions! 
-            Fill your rooms with life and create an open and pleasant atmosphere with over 300 picture
-            frames for artwork, photos, posters or three-dimensional objects. Here you can find everything
-            for decorating your work space and for the satisfactory presentation of the things you want to
-            exhibit. Discover our high-quality and acid-free passepartouts as well. Or find the appropriate
-            system for professional picture hanging. For the DIY enthusiasts among you we also offer a special
-            selection of tools for making distinctive frames and protective mounting boards.<br><br> 
 
-            <span> Select your picture format or browse around in our world of frames.</span><br>
+    <div class='top-div'>
+        <div class='top-sec-1'>
+            <div class='top-div-text'>
+                <span class='text-large'>RWANDA NZIZA</span><br>
+                <span class='text-small'>Branding Rwanda to the world, together.</span>
+            </div>
         </div>
-        <a class='explore-btn' href='#gallery-div'>Explore Now</a>
+        <div class='imigongo-div'></div>
+        <div class='top-sect-2'>
+            <div class='description-body'>
+                Welcome to the RwandaNziza page of picture Limited editions! 
+                Fill your rooms with life and create an open and pleasant atmosphere with over 300 picture
+                frames for artwork, photos, posters or three-dimensional objects. <br><br> 
+    
+            </div>
+            <a class='explore-btn exp-head' onclick='divSwap(".top-div", ".gallery-div")' href='#'>Explore Now</a>
+        </div>
+
     </div>
-    <div id='gallery-div'>
-        <div class='div-title gallery-title'>Our Limited Version</div>
-        <div class='div-sub title-sub'>Please select Image that you like.</div>
-            <div class='gallery-grid'></div>
+ 
+    <div  class="gallery-div">
+        <div class='div-sub title-sub'>Please select an image to order.</div> 
+            <div class='gallery-flex'>
+
+            </div>
+            <a class='explore-btn to-contact' onclick='divSwap(".gallery-div", ".footer")' href='#'>About us</a>
     </div>
-    <div id='ordering-div'>
-        <div class='ordering-details'>
-            <div id='img-title'>'Sunset in Kinunu'</div>
-            <div id='img-location'>Location: <span id='loc-value'>Rusizi</span></div>
-            <div class='size-select'>
-                Select your option
-                <div class='flex-boxes'>
-                    <div>
-                        <div class='size-label'>Small size:</div>
-                        <div  class='size-box' id='small-size' tabindex='1' onclick='sizeClick("small")'>
-                            <span>50 X 30 cm</span>
-                            <span>450,000 RWF</span>
+     <div id='ordering-div' class="ordering-div">
+         <span class="close">&times;</span>
+         <div class='ordering-div-content'>
+            <div class='ordering-details'>
+                <div id='img-title'>'Sunset in Kinunu'</div>
+                <div id='img-location'>Location: <span id='loc-value'>Rusizi</span></div>
+                <div class='size-select'>
+                    Select your option
+                    <div class='flex-boxes'>
+                        <div>
+                            <div class='size-label'>Small size:</div>
+                            <div  class='size-box' id='small-size' tabindex='1' onclick='sizeClick("small")'>
+                                <span>50 X 30 cm</span>
+                                <span>450,000 RWF Minimum</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class='size-label'>Medium size:</div>
+                            <div class='size-box' id='medium-size' tabindex='1' onclick='sizeClick("medium")'>
+                                <span>80 X 60 cm</span>
+                                <span>600,000 RWF Minimum</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class='size-label'>Large size:</div>
+                            <div  class='size-box' id='large-size' tabindex='1' onclick='sizeClick("large")'>
+                                <span>150 X 70 cm</span>
+                                <span>800,000 RWF Minimum</span>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div class='size-label'>Medium size:</div>
-                        <div class='size-box' id='medium-size' tabindex='1' onclick='sizeClick("medium")'>
-                            <span>80 X 60 cm</span>
-                            <span>600,000 RWF</span>
-                        </div>
-                    </div>
-                    <div>
-                        <div class='size-label'>Large size:</div>
-                        <div  class='size-box' id='large-size' tabindex='1' onclick='sizeClick("large")'>
-                            <span>150 X 70 cm</span>
-                            <span>800,000 RWF</span>
-                        </div>
-                    </div>
-                </div>
-                <div class='checkout-val'>Total: <span id='checkout-val'>800,000 RWF</span></div>
-            </div>    
-            <label class='terms-conds-label'>
-                <input type='checkbox' id='terms-conds-checkbox' onclick='checkboxClick()'> 
-                  I accept the <a class='order-terms-conds' href=''>Terms and Conditions</a>
-            </label>
-            <input type='button' id='checkout-btn' value='Proceed to Checkout' onclick='submit_to_checkout()'>  
+                    <div class='checkout-val'>Total: <span id='checkout-val'>800,000 RWF</span></div>
+                </div>    
+                <label class='terms-conds-label'>
+                    <input type='checkbox' id='terms-conds-checkbox' onclick='checkboxClick()'> 
+                    I accept the <a class='order-terms-conds' href=''>Terms and Conditions</a>
+                </label>
+                <input type='button' id='checkout-btn' value='Proceed to Checkout' onclick='submit_to_checkout()'>
+                <label class='terms-conds-label'>Any special support or question? Click<a class='order-terms-conds' onclick='to_contactForm(".gallery-div", ".contact-us")'> here</a></label>  
                 
         </div>
         <div class='large-frame-img'>
@@ -98,10 +103,13 @@
         <div class='small-frame-img'>
             <div id='selected-s-size'></div>
         </div> 
-    </div>
-    <div class='contact'>
-        <div class='div-title '>Contact Us</div>
-        <div class='div-sub'>Any question or remarks? Just write us a message!</div>
+         </div>
+            
+    </div> 
+
+    <div class='contact-us'>
+        <div class='div-title contact-h'>Contact Us</div>
+        <div class='div-sub'>Any question or special support? Just write us a message!</div>
         <form id='contact-form'>
             <label>
                 <span class='input-group'>Name</span><br>
@@ -121,8 +129,9 @@
             </label>
             <input type='submit' id='contact-sbmt-btn' value='Send Email'>
         </form>
+        <a class='explore-btn to-contact' onclick='divSwap(".contact-us", ".footer")' href='#'>About us</a>
     </div>
-    <footer>
+    <footer class='footer'>
         <div class='footer-div'>
             <div class='flex box1'>
                 <div class='footer-div footer-flex-title'>ABOUT US</div>
@@ -151,7 +160,8 @@
             </div>
         </div>
         <div class='copyright-div'>&copy <script>document.write(new Date().getFullYear())</script> Copyright:<span class='span-img-rda'> Image Rwanda Ltd.</span></div>
-    </footer>
+    </footer> 
+    
     <script src='ltd_editions.js'></script>
 </body>
 </html>
