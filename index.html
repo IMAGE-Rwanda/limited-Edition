@@ -3,8 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>limited editions</title>
+    <title>IMAGE RWANDA | Rwanda nziza campain.</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&amp;family=Roboto:wght@400;700;900&amp;display=swap" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='ltd_editions.css'>
     <script src="https://kit.fontawesome.com/d881a9c703.js" crossorigin="anonymous"></script>
 </head>
@@ -54,7 +55,7 @@
             <a class='explore-btn to-contact' onclick='divSwap(".gallery-div", ".footer")' href='#'>About us</a>
     </div>
      <div id='ordering-div' class="ordering-div">
-         <span class="close">&times;</span>
+         <span class="close">&times;</span><br>
          <div class='ordering-div-content'>
             <div class='ordering-details'>
                 <div id='img-title'>'Sunset in Kinunu'</div>
@@ -66,25 +67,25 @@
                             <div class='size-label'>Small size:</div>
                             <div  class='size-box' id='small-size' tabindex='1' onclick='sizeClick("small")'>
                                 <span>50 X 30 cm</span>
-                                <span>450,000 RWF Minimum</span>
+                                <span>450,000 RWF</span>
                             </div>
                         </div>
                         <div>
                             <div class='size-label'>Medium size:</div>
                             <div class='size-box' id='medium-size' tabindex='1' onclick='sizeClick("medium")'>
                                 <span>80 X 60 cm</span>
-                                <span>600,000 RWF Minimum</span>
+                                <span>600,000 RWF</span>
                             </div>
                         </div>
                         <div>
                             <div class='size-label'>Large size:</div>
                             <div  class='size-box' id='large-size' tabindex='1' onclick='sizeClick("large")'>
                                 <span>150 X 70 cm</span>
-                                <span>800,000 RWF Minimum</span>
+                                <span>800,000 RWF</span>
                             </div>
                         </div>
                     </div>
-                    <div class='checkout-val'>Total: <span id='checkout-val'>800,000 RWF</span></div>
+                    <div class='checkout-val'>Total: <span id='checkout-val'>800,000 RWF Minimum</span></div>
                 </div>    
                 <label class='terms-conds-label'>
                     <input type='checkbox' id='terms-conds-checkbox' onclick='checkboxClick()'> 
@@ -108,16 +109,17 @@
     </div> 
 
     <div class='contact-us'>
+        <h3 id='message-res'></h3>
         <div class='div-title contact-h'>Contact Us</div>
         <div class='div-sub'>Any question or special support? Just write us a message!</div>
         <form id='contact-form'>
             <label>
                 <span class='input-group'>Name</span><br>
-                <input type='text' id='name-field'>
+                <input type='text' id='name-field' required>
             </label>
             <label>
                 <span class='input-group'>Email</span><br>
-                <input type='email' id='email-field'>
+                <input type='email' id='email-field' required>
             </label>
             <label>
                 <span class='input-group'>Phone</span><br>
@@ -125,11 +127,11 @@
             </label>
             <label>
                 <span class='input-group'>Message</span><br>
-                <textarea  id='message-field'></textarea>
+                <textarea  id='message-field' required></textarea>
             </label>
             <input type='submit' id='contact-sbmt-btn' value='Send Email'>
         </form>
-        <a class='explore-btn to-contact' onclick='divSwap(".contact-us", ".footer")' href='#'>About us</a>
+        <a class='explore-btn to-contact' onclick='divSwap(".contact-us", ".footer")' href='#'>More About us</a>
     </div>
     <footer class='footer'>
         <div class='footer-div'>
@@ -140,7 +142,16 @@
                      exclusive collections of Royalty-Free images, 
                      Videos and Illustrations.
                 </div>
-                <div class='footer-div terms-conds-link'><a href='#'><i class='fa fa-info'></i>Terms and Conditions</a></div>
+                <div class='footer-div terms-conds-link'>
+                    <a href='#'><i class='fa fa-info'></i>Terms and Conditions</a>
+<!--                      
+                    <a href='https://twitter.com/image_rw?s=21' style='margin-left: 3%;'><i class='fa fa-twitter' title='Image Rwanda on Twitter'></i></a>
+                    <a href='https://www.instagram.com/imagerwanda/?igshid=c6vqpddwh8lj'><i class='fa fa-instagram' title='Image Rwanda on Instagram'></i></a>
+                    <a href='https://flickr.com/photos/image_rw'><i class='fa fa-flickr' title='Image Rwanda on Flickr'></i></a> -->
+                </div>
+                <!-- <div class='footer-div terms-conds-link social-media'>
+
+                </div> -->
             </div>
             <div class='flex box2'>
                 <div class='footer-div footer-flex-title'>VISIT US</div>
